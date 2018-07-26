@@ -12,6 +12,13 @@
 	function addProduct() {
 		window.location.href = "${pageContext.request.contextPath}/admin/products/add.jsp";
 	}
+	//提示用户是否删除
+	function delBook(id){
+		if(confirm("是否确认删除")){
+			//alert(id);
+			window.location.href="${pageContext.request.contextPath}/servlet/delBookServlet?id="+id;
+		}
+	}
 </script>
 </HEAD>
 <body>
@@ -40,7 +47,7 @@
 									类别：</td>
 								<td class="ta_01" bgColor="#ffffff"><select name="category"
 									id="category">
-										<option value="" selected="selected">--选择商品类加--</option>
+										<option value="" selected="selected">--选择商品类别--</option>
 										<option value="文学">文学</option>
 										<option value="生活">生活</option>
 										<option value="计算机">计算机</option>
@@ -67,7 +74,7 @@
 								<td height="22" align="center" bgColor="#f5fafe" class="ta_01">
 									价格区间(元)：</td>
 								<td class="ta_01" bgColor="#ffffff"><input type="text"
-									name="minprice" size="10" value="" />- <input type="text"
+									name="minprice" size="10" value="" /> — <input type="text"
 									name="maxprice" size="10" value="" /></td>
 							</tr>
 
@@ -114,12 +121,12 @@
 								<td align="center" width="9%">商品价格</td>
 								<td align="center" width="9%">商品数量</td>
 								<td width="8%" align="center">商品类别</td>
-								<td width="8%" align="center">编辑</td>
+								<td width="8%" align="center">修改</td>
 
 								<td width="8%" align="center">删除</td>
 							</tr>
 
-							<c:forEach items="${books}" var="b">
+							<c:forEach items="${books }" var="b">
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
@@ -139,14 +146,14 @@
 									</td>
 
 									<td align="center" style="HEIGHT: 22px" width="7%"><a
-										href="#">
+										href="javascript:delBook:delBook('${b.id }')">
 											<img
 											src="${pageContext.request.contextPath}/admin/images/i_del.gif"
 											width="16" height="16" border="0" style="CURSOR: hand">
 									</a>
 									</td>
 								</tr>
-						</c:forEach>
+							</c:forEach>
 						</table>
 					</td>
 				</tr>

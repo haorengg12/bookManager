@@ -3,6 +3,7 @@ package com.tarena.domain;
 import java.io.Serializable;
 
 public class Book implements Serializable {
+
     private String id;
     private String name;
     private double price;
@@ -57,6 +58,5 @@ public class Book implements Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
-
 
 }

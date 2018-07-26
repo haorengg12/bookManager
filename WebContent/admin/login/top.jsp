@@ -101,7 +101,7 @@ TH {
 										src="${pageContext.request.contextPath}/admin/images/mis_05a.jpg"
 										width="6" height="18">
 									</td>
-									<td width="155" valign="bottom"
+									<td width="90" valign="bottom"
 										background="${pageContext.request.contextPath}/admin/images/mis_05b.jpg">
 										<font color="blue"><a href="javascript:void(0)"
 											onclick="exitSys()">退出系统</a> </font></td>

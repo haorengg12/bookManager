@@ -9,21 +9,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.tarena.service.BookServiceImpl;
 
-import com.tarena.domain.Book;
-
-public class FindBookByIdServlet extends HttpServlet{
+public class DelBookServlet extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//super.doGet(request, response);
 		String id = request.getParameter("id");
-		//调用业务逻辑
 		BookServiceImpl bs = new BookServiceImpl();
-		Book book = bs.findBookById(id);//创建方法
+		bs.delBook(id);
 		
-		request.setAttribute("book", book);
-		request.getRequestDispatcher("/admin/products/edit.jsp").forward(request, response);
+		//页面跳转
+		request.getRequestDispatcher("/servlet/bookListServlet").forward(request, response);
 	}
 
 	@Override
