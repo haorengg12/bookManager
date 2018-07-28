@@ -1,54 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-  <display-name></display-name>
- 
-  <servlet>
-    <servlet-name>BookListServlet</servlet-name>
-    <servlet-class>com.tarena.web.servlet.BookListServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>BookListServlet</servlet-name>
-    <url-pattern>/servlet/bookListServlet</url-pattern>
-  </servlet-mapping>
-  
-    <servlet>
-    <servlet-name>addBookServlet</servlet-name>
-    <servlet-class>com.tarena.web.servlet.AddBookServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>addBookServlet</servlet-name>
-    <url-pattern>/servlet/addBookServlet</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <servlet-name>FindBookByIdServlet</servlet-name>
-    <servlet-class>com.tarena.web.servlet.FindBookByIdServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>FindBookByIdServlet</servlet-name>
-    <url-pattern>/servlet/findBookByIdServlet</url-pattern>
-  </servlet-mapping>
-  
-    <servlet>
-    <servlet-name>UpdateBookServlet</servlet-name>
-    <servlet-class>com.tarena.web.servlet.UpdateBookServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>UpdateBookServlet</servlet-name>
-    <url-pattern>/servlet/updateBookServlet</url-pattern>
-  </servlet-mapping>
-  
-     <servlet>
-    <servlet-name>DelBookServlet</servlet-name>
-    <servlet-class>com.tarena.web.servlet.DelBookServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>DelBookServlet</servlet-name>
-    <url-pattern>/servlet/delBookServlet</url-pattern>
-  </servlet-mapping> 
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
 
-  
-  <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
+    <servlet>
+        <servlet-name>BookListServlet</servlet-name>
+        <servlet-class>com.tarena.web.servlet.BookListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookListServlet</servlet-name>
+        <url-pattern>/servlet/bookListServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addBookServlet</servlet-name>
+        <servlet-class>com.tarena.web.servlet.AddBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addBookServlet</servlet-name>
+        <url-pattern>/servlet/addBookServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FindBookByIdServlet</servlet-name>
+        <servlet-class>com.tarena.web.servlet.FindBookByIdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindBookByIdServlet</servlet-name>
+        <url-pattern>/servlet/findBookByIdServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateBookServlet</servlet-name>
+        <servlet-class>com.tarena.web.servlet.UpdateBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateBookServlet</servlet-name>
+        <url-pattern>/servlet/updateBookServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DelBookServlet</servlet-name>
+        <servlet-class>com.tarena.web.servlet.DelBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DelBookServlet</servlet-name>
+        <url-pattern>/servlet/delBookServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>searchBookServlet</servlet-name>
+        <servlet-class>com.tarena.web.servlet.SearchBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>searchBookServlet</servlet-name>
+        <url-pattern>/servlet/searchBookServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>delAllBooksServlet</servlet-name>
+        <servlet-class>com.tarena.web.servlet.DeletAllbooks</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>delAllBooksServlet</servlet-name>
+        <url-pattern>/servlet/delAllBooksServlet</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
 </web-app>
